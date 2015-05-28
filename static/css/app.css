@@ -1,0 +1,49 @@
+form.ng-submitted input.ng-invalid-required {
+  border-color: #FA787E;
+}
+
+input.ng-invalid-number.ng-dirty {
+  border-color: #FA787E;
+}
+
+input.ng-invalid-min.ng-dirty {
+  border-color: #FA787E;
+}
+
+input.ng-invalid-date.ng-dirty {
+  border-color: #FA787E;
+}
+
+form.ng-submitted div.invalid {
+  color: #FA787E;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}

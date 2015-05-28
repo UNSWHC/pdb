@@ -1,0 +1,16 @@
+<tr ng-click="rowClick()" ng-class="{clickable : clickable()}">
+  <td>{{player.firstName}}</td>
+  <td>{{player.lastName}}</td>
+  <td>{{player.sex}}</td>
+  <td>{{latestYear(player)}} <span class="badge">+ {{totalYears(player) - 1}}</span></td>
+  <td>{{player.dob | date:'yyyy-MM-dd'}}</td>
+  <td ng-if="actions">
+    <ul class="list-inline">
+      <li ng-repeat="action in actions" 
+          ng-class="action.classes"
+          ng-class="{clickable: action.perform}"
+          ng-click="action.perform(player)">
+        <span ng-if="action.glyphiconClasses" class="glyphicon" ng-class="action.glyphiconClasses"></span> {{action.text}}</li>
+    </ul>
+  </td>
+</tr>

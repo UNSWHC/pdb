@@ -1,0 +1,14 @@
+<div class="page-header"><h1>{{player.firstName}} {{player.lastName}}</h1></div>
+
+<dl class="dl-horizontal">
+  <dt>First Name</dt>
+  <dd>{{player.firstName}}</dd>
+  <dt>Last Name</dt>
+  <dd>{{player.lastName}}</dd>
+  <dt>Sex</dt>
+  <dd>{{player.sex}}</dd>
+  <dt>Years Played</dt>
+  <dd><span ng-repeat="year in player.recordedYears">{{year}}<span ng-if="!$last">, </span></span> + {{player.unrecordedYears}} more<dd>
+  <dt>Date of Birth</dt>
+  <dd>{{player.dob | date:'yyyy-MM-dd'}}</dd>
+</dl>

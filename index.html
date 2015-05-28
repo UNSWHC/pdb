@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hc">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <base href="/">
+    <title>UNSWHC Player Database</title>
+    <link href="/_static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/_static/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <ng-include src="'/_static/nav/nav.html'"></ng-include>
+    <div class="container">
+      <ng-view></ng-view>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="/_static/lib/bootstrap.js"></script>
+    <script src="/_static/lib/angular.js"></script>
+    <script src="/_static/lib/angular-resource.js"></script>
+    <script src="/_static/lib/angular-route.js"></script>
+    <script src="/_static/lib/bootstrap3-typeahead.js"></script>
+    
+    <script src="/_static/app.js"></script>
+    <script src="/_static/directives/player-builder/player-builder.js"></script>
+    <script src="/_static/directives/players-grid/players-grid.js"></script>
+    <script src="/_static/directives/searcher/searcher.js"></script>
+    <script src="/_static/view-player/view-player.js"></script>
+    <script src="/_static/view-players/view-players.js"></script>
+    <script src="/_static/add-players/pending-players.js"></script>
+    <script src="/_static/add-players/add-players.js"></script>
+    <script src="/_static/services/players.js"></script>
+  </body>
+</html>

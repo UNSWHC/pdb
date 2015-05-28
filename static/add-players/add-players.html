@@ -1,0 +1,45 @@
+<div class="page-header"><h1>Add Players <small class="form-inline">for the <input class="form-control" type="number" ng-model="year"> season</small></h1>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-inline">
+      <h3>Bulk Add Players</h3>
+      <div class="form-group">
+        <label for="bulkUpload">Upload CSV</label>
+        <input type="file" id="bulkUpload">
+      </div>
+    </div>
+    <div>
+    <h3>Add a New Player</h3>
+    <hc-player-builder hc-year="year"
+        hc-existing-player="addPlayersCtrl.addExistingPlayer(player)"
+        hc-new-player="addPlayersCtrl.addNewPlayer(player)">
+    </hc-player-builder>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div ng-if="!(new.any() || existing.any())">
+    To add players for the {{year}} season:
+    <ul>
+      <li>Upload a CSV to bulk add players
+      <li>Search for an existing player
+      <li>Add a brand new player
+    </ul>
+    </div>
+    <div ng-if="new.any() || existing.any()">
+      <button class="btn btn-primary"
+          ng-click="addPlayersCtrl.saveAll()">Save All</button>
+      <div ng-if="new.any()">
+        <h3>New Players</h3>
+        <hc-players-grid hc-players-with-extras="new.data"></hc-players-grid>
+      </div>
+      <div ng-if="existing.any()">
+        <h3>Existing Players</h3>
+        <hc-players-grid
+            hc-players-with-extras="existing.data">
+        </hc-players-grid>
+      </div>
+    <div>
+  </div>
+</div>

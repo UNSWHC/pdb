@@ -1,0 +1,21 @@
+<table class="table" ng-class="{'table-hover' : link}">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Sex</th>
+      <th>Years</th>
+      <th>Date of Birth</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr hc-players-grid-row ng-if="playersWithExtras" 
+        ng-repeat="row in playersWithExtras"
+        hc-player="row.player"
+        hc-actions="row.actions"></tr>
+    <tr hc-players-grid-row ng-if="players" 
+        ng-repeat="player in players"
+        hc-player="player"></tr>
+  </tbody>
+</table>
